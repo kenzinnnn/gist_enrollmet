@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>College Admissions Form</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px 0;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 300px; /* Adjust width as needed */
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  width: 300px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 80px; /* Adjust height as needed */
+}
+
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>College Admissions Form</h1>
+<form action="process_admission.php" method="post">
+
+  <h2>Personal Information</h2>
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstName" required><br>
+
+  <label for="middleInitial">Middle Initial:</label>
+  <input type="text" id="middleInitial" name="middleInitial"><br>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastName" required><br>
+
+  <label for="birthDate">Birth Date:</label>
+  <input type="date" id="birthDate" name="birthDate" required><br>
+
+
+  <label for="gender">Gender:</label>
+  <select id="gender" name="gender" required>
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select><br>
+
+  <label for="nationality">Nationality:</label>
+  <input type="text" id="nationality" name="nationality" required><br>
+
+  <h2>Contact Information</h2>
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(000) 000-0000" required><br>
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" name="email" placeholder="example@example.com" required><br>
+
+  <label for="address">Address:</label><br>
+  <textarea id="address" name="address" rows="3" placeholder="Street Address"></textarea><br>
+  <input type="text" name="addressLine2" placeholder="Street Address Line 2"><br>
+  <input type="text" id="city" name="city" placeholder="City" required><br>
+  <input type="text" id="province" name="province" placeholder="Province" required><br>
+  <input type="text" id="postalCode" name="postalCode" placeholder="Postal / Zip Code" required><br>
+
+  <h2>Emergency Contact</h2>
+  <label for="emergencyFirstName">First Name:</label>
+  <input type="text" id="emergencyFirstName" name="emergencyFirstName" required><br>
+
+  <label for="emergencyLastName">Last Name:</label>
+  <input type="text" id="emergencyLastName" name="emergencyLastName" required><br>
+
+  <label for="emergencyRelationship">Relationship:</label>
+  <input type="text" id="emergencyRelationship" name="emergencyRelationship" required><br>
+
+  <label for="emergencyEmail">Email:</label>
+  <input type="email" id="emergencyEmail" name="emergencyEmail" placeholder="example@example.com" required><br>
+
+  <label for="emergencyPhone">Phone Number:</label>
+  <input type="tel" id="emergencyPhone" name="emergencyPhone" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(000) 000-0000" required><br>
+
+  <h2>Other Languages</h2>
+  <label for="otherLanguages">Do you speak any languages other than English?</label><br>
+  <textarea id="otherLanguages" name="otherLanguages" rows="2"></textarea><br>
+
+  <input type="submit" value="Next">
+</form>
+</div>
+</body>
+</html>
